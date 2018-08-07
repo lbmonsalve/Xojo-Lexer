@@ -13,6 +13,10 @@ Protected Module Lexical
 
 	#tag Note, Name = ChangeLog
 		
+		0.0.180807
+		
+		* Add Scripts/xopo - Save.rbs
+		
 		0.0.180805
 		
 		* init
@@ -27,7 +31,7 @@ Protected Module Lexical
 	#tag EndNote
 
 
-	#tag Constant, Name = Version, Type = String, Dynamic = False, Default = \"0.0.180805", Scope = Protected
+	#tag Constant, Name = Version, Type = String, Dynamic = False, Default = \"0.0.180807", Scope = Protected
 	#tag EndConstant
 
 

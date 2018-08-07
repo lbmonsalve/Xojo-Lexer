@@ -1,0 +1,66 @@
+// to change:
+Dim foldersToMove() As String = Array("Lexical")
+
+
+// dont change
+Dim projectPath As String
+projectPath= ProjectShellPath
+
+DoCommand "SaveFile"
+DoCommand "CloseWindow"
+
+Dim folder, command As String
+Dim result As String
+
+Dim TrgetWin32, TrgetMacOS, TrgetLinux As Boolean
+
+command= "xopo --targetOS "
+result= Lowercase(Trim(DoShellCommand(command)))
+
+Select Case result
+Case "targetwin"
+TrgetWin32= True
+Case "targetmacos"
+TrgetMacOS= True
+Case "targetlinux"
+TrgetLinux= True
+End Select
+
+command= "xopo -p "+ projectPath+ " "";Lexical/"" "";../Lexical/"" "
+result= DoShellCommand(command)
+'Print result
+
+If TrgetWin32 Then
+For Each folder In foldersToMove
+command= "move /Y """+ folder+ """ ""..\"+ folder+ """"
+result= DoShellCommand(command)
+'Print result
+'Return
+Next
+ElseIf TrgetMacOS Then
+End If
+
+//DoCommand "OpenFile"
+OpenFile projectPath
+
+
+// helper functions
+Function GetProjectFolder(filePath As String, isWin As Boolean) As String
+Dim ret, sep As String
+If isWin Then
+sep= "\"
+Else
+sep= "/"
+End If
+
+Dim i, n As Integer
+
+n= CountFields(filePath, sep)
+
+For i= 1 To n- 1
+ret= ret+ NthField(filePath, sep, i)+ sep
+Next
+
+Return ret
+
+End Function

@@ -218,44 +218,6 @@ Inherits Lexical.Lexer
 
 	#tag ViewBehavior
 		#tag ViewProperty
-			Name="caseSensitive"
-			Group="Behavior"
-			Type="Boolean"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="consolidateNewLines"
-			Group="Behavior"
-			InitialValue="False"
-			Type="Boolean"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="currentLine"
-			Group="Behavior"
-			InitialValue="1"
-			Type="Integer"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="ignoreNewLines"
-			Group="Behavior"
-			Type="Boolean"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="ignoreTabs"
-			Group="Behavior"
-			Type="Boolean"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="ignoreWhitespace"
-			Group="Behavior"
-			Type="Boolean"
-			InheritedFrom="Lex.Lexer"
-		#tag EndViewProperty
-		#tag ViewProperty
 			Name="Index"
 			Visible=true
 			Group="ID"
@@ -288,12 +250,6 @@ Inherits Lexical.Lexer
 			Group="Position"
 			InitialValue="0"
 			InheritedFrom="Object"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="version"
-			Group="Behavior"
-			Type="String"
-			InheritedFrom="Lex.Lexer"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

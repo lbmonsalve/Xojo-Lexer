@@ -1,3 +1,6 @@
+// Copyright (c) 2018 Bernardo Monsalve
+// https://github.com/lbmonsalve/Xojo-xopo.git
+//
 // to change:
 Dim tagsToChange() As Pair
 tagsToChange.Append New Pair(";Lexical/", ";../Lexical/")
